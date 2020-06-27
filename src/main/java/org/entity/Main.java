@@ -11,5 +11,8 @@ public class Main
         System.out.println( "Hello World!" );
 
         Student junaidMartin = new Student.StudentBuilder().setFirstName("Junaid").setLastName("Martin").setStudNum(216178606).createStudent();
+
+        User user = new User.UserBuilder(8765, "Christ", "Kitenge Mbuyi").build();
+
     }
 }

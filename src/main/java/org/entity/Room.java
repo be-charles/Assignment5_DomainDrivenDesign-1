@@ -1,7 +1,8 @@
 package org.entity;
 
 public class Room {
-    // Inga
+    // Inga Mzileni <216279631@mycput.ac.za>
+
     private String roomNumber, type;
     private int price;
     private String status;
@@ -13,6 +14,7 @@ public class Room {
         this.status = builder.status;
     }
 
+    // Getters
     public String getRoomNumber() {
         return roomNumber;
     }
@@ -39,6 +41,8 @@ public class Room {
                 '}';
     }
 
+
+    // Builder Class
     public static class Builder{
         private String roomNumber;
         private int price;
@@ -73,7 +77,5 @@ public class Room {
         public Room build(){
             return new Room(this);
         }
-
-
     }
 }

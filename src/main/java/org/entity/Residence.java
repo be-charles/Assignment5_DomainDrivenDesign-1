@@ -1,80 +1,70 @@
 package org.entity;
 
 public class Residence {
+
+    // Brandon Eugene Charles <218220065@mycput.ac.za>
     private String address;
     private String name;
     private int numberOfRooms;
     private int residenceId;
 
-    private Residence(String address, String name, int numberOfRooms) {
-        this.address = address;
-        this.name = name;
-        this.numberOfRooms = numberOfRooms;
+    // Constructor
+    private Residence(Builder builder) {
+        this.address = builder.address;
+        this.name = builder.name;
+        this.numberOfRooms = builder.numberOfRooms;
     }
 
+    // Getters
     public int getResidenceId() {
         return residenceId;
-    }
-
-    public void setResidenceId(int residenceId) {
-        this.residenceId = residenceId;
     }
 
     public String getAddress() {
         return address;
     }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public String getName() {
         return name;
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getNumberOfRooms() {
         return numberOfRooms;
     }
 
-    public void setNumberOfRooms(int numberOfRooms) {
-        this.numberOfRooms = numberOfRooms;
-    }
-
-    public static class ResidenceBuilder{
+    // Builder Class
+    public static class Builder{
         private String address;
         private String name;
         private int numberOfRooms;
         private int residenceId;
 
-        public ResidenceBuilder(){}
-        public ResidenceBuilder(int residenceId){ this.residenceId = residenceId; }
-        public ResidenceBuilder(String address, String name, int numberOfRooms) {
-            this.address = address;
-            this.name = name;
-            this.numberOfRooms = numberOfRooms;
-        }
-
         public void setResidenceId(int residenceId) {
             this.residenceId = residenceId;
         }
 
-        public void setAddress(String address) {
+        public Builder setAddress(String address) {
             this.address = address;
+            return this;
         }
 
-        public void setName(String name) {
+        public Builder setName(String name) {
             this.name = name;
+            return this;
         }
 
-        public void setNumberOfRooms(int numberOfRooms) {
+        public Builder setNumberOfRooms(int numberOfRooms) {
             this.numberOfRooms = numberOfRooms;
+            return this;
         }
+
+        public Builder copy (Residence residence) {
+            this.address = residence.address;
+            this.name = residence.name;
+            this.numberOfRooms = residence.numberOfRooms;
+            return this;
+        }
+
         public Residence build(){
-            return new Residence(address, name, numberOfRooms);
+            return new Residence(this);
         }
     }
 }

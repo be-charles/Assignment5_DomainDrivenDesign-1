@@ -50,6 +50,7 @@ public class Residence {
         private int numberOfRooms;
         private int residenceId;
 
+        public ResidenceBuilder(){}
         public ResidenceBuilder(int residenceId){ this.residenceId = residenceId; }
         public ResidenceBuilder(String address, String name, int numberOfRooms) {
             this.address = address;

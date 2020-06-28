@@ -1,7 +1,6 @@
 package org.entity;
 
 public class Residence {
-
     private String address;
     private String name;
     private int numberOfRooms;

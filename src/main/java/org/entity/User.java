@@ -1,7 +1,9 @@
 package org.entity;
 
 public class User {
+
     // Christ Kitenge Mbuyi <217248756@mycput.ac.za>
+
     private long userID;
     private String firstName;
     private String lastName;
@@ -50,6 +52,7 @@ public class User {
 
     // Builder Class
     public static class Builder {
+
         private long userID;
         private String firstName;
         private String lastName;

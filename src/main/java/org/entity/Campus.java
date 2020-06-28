@@ -1,6 +1,7 @@
 package org.entity;
 
 public class Campus {
+
     // Phumelela Hoho <212195131@mycput.ac.za>
     private int campusCode;
     private String name;
@@ -34,11 +35,13 @@ public class Campus {
         private String name;
 
         public Builder setCampusCode(int campusCode) {
+
             this.campusCode = campusCode;
             return this;
         }
 
         public Builder setName(String name) {
+
             this.name = name;
             return this;
         }
@@ -53,5 +56,4 @@ public class Campus {
             return new Campus(this);
         }
     }
-
 }

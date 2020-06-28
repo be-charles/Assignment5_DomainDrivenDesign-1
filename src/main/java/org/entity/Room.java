@@ -2,6 +2,7 @@ package org.entity;
 
 public class Room {
     // Inga Mzileni <216279631@mycput.ac.za>
+
     private String roomNumber, type;
     private int price;
     private String status;
@@ -30,23 +31,6 @@ public class Room {
         return status;
     }
 
-    // Setters
-    public void setRoomNumber(String roomNumber) {
-        this.roomNumber = roomNumber;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public void setPrice(int price) {
-        this.price = price;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
         return "Room{" +
@@ -56,6 +40,7 @@ public class Room {
                 ", status='" + status + '\'' +
                 '}';
     }
+
 
     // Builder Class
     public static class Builder{
@@ -92,6 +77,5 @@ public class Room {
         public Room build(){
             return new Room(this);
         }
-
     }
 }

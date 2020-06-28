@@ -1,6 +1,7 @@
 package org.entity;
 
 public class Residence {
+
     // Brandon Eugene Charles <218220065@mycput.ac.za>
     private String address;
     private String name;
@@ -22,11 +23,9 @@ public class Residence {
     public String getAddress() {
         return address;
     }
-
     public String getName() {
         return name;
     }
-
     public int getNumberOfRooms() {
         return numberOfRooms;
     }

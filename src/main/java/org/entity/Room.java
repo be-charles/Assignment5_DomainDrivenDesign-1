@@ -4,7 +4,7 @@ public class Room {
     // Inga
     private String roomNumber, type;
     private int price;
-    private boolean status;
+    private String status;
 
     private Room(Builder builder){
         this.roomNumber = builder.roomNumber;
@@ -25,7 +25,7 @@ public class Room {
         return type;
     }
 
-    public boolean getStatus() {
+    public String getStatus() {
         return status;
     }
 
@@ -43,7 +43,7 @@ public class Room {
         private String roomNumber;
         private int price;
         private String type;
-        private boolean status;
+        private String status;
 
         public Builder setRoomNumber(String roomNumber){
             this.roomNumber = roomNumber;
@@ -57,7 +57,7 @@ public class Room {
             this.type = type;
             return this;
         }
-        public Builder setStatus(boolean status){
+        public Builder setStatus(String status){
             this.status = status;
             return this;
         }

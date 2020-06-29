@@ -2,7 +2,9 @@ package org.entity;
 
 public class Room {
     // Inga
-    private String roomNumber, price, type, status;
+    private String roomNumber, type;
+    private int price;
+    private String status;
 
     private Room(Builder builder){
         this.roomNumber = builder.roomNumber;
@@ -15,7 +17,7 @@ public class Room {
         return roomNumber;
     }
 
-    public String getPrice() {
+    public int getPrice() {
         return price;
     }
 
@@ -38,13 +40,16 @@ public class Room {
     }
 
     public static class Builder{
-        private String roomNumber, price, type, status;
+        private String roomNumber;
+        private int price;
+        private String type;
+        private String status;
 
         public Builder setRoomNumber(String roomNumber){
             this.roomNumber = roomNumber;
             return this;
         }
-        public Builder setPrice(String price){
+        public Builder setPrice(int price){
             this.price = price;
             return this;
         }
